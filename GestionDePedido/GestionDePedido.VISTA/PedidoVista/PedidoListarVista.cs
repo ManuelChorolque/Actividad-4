@@ -57,10 +57,7 @@ namespace GestionDePedido.VISTA.PedidoVista
         private void button1_Click(object sender, EventArgs e)
         {
             PedidoMostrarTotalVista fr = new PedidoMostrarTotalVista();
-            if (fr.ShowDialog() == DialogResult.OK)
-            {
-                dataGridView1.DataSource = bss.PedidoDatosMostrarBss();
-            }
+            fr.Show();
         }
     }
 }

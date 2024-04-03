@@ -65,11 +65,20 @@ namespace GestionDePedido.DAL
                 "FROM CLIENTE INNER JOIN PEDIDO ON CLIENTE.IDCLIENTE = PEDIDO.IDCLIENTE";
             return conexion.EjecutarDataTabla(consulta, "fsdf");
         }
-        public DataTable PedidoDatosMostrarDal()
+        public DataTable PedidoDatosMostrarDal(int id)
         {
             string consulta = "SELECT P.IDCLIENTE,COUNT(P.IDPEDIDO) CANTIDAD_PEDIDOS,SUM(P.TOTAL) TOTAL_PEDIDOS " +
                 "FROM PEDIDO P " +
-                "GROUP BY P.IDCLIENTE";
+                "WHERE P.IDCLIENTE = " + id + 
+                "GROUP BY P.IDCLIENTE ";
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
+        public DataTable PedidoDatosListarDal(int id)
+        {
+            string consulta = "SELECT PEDIDO.IDPEDIDO,PEDIDO.FECHA,PEDIDO.TOTAL,PEDIDO.ESTADO " +
+                "FROM CLIENTE " +
+                "INNER JOIN PEDIDO ON CLIENTE.IDCLIENTE = PEDIDO.IDCLIENTE " +
+                "WHERE CLIENTE.IDCLIENTE = " + id;
             return conexion.EjecutarDataTabla(consulta, "fsdf");
         }
     }

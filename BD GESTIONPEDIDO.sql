@@ -37,5 +37,3 @@ insert into pedido values (4,'2022-01-08 08:10:29', '678', 'Cancelado');
 insert into pedido values (5,'2022-01-06 12:36:59', '206', 'Pendiente');
 
 SELECT * FROM PEDIDO
-
-

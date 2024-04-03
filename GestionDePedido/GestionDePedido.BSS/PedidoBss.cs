@@ -37,9 +37,13 @@ namespace GestionDePedido.BSS
         {
             return dal.PedidoDatosDal();
         }
-        public DataTable PedidoDatosMostrarBss()
+        public DataTable PedidoDatosMostrarBss(int id)
         {
-            return dal.PedidoDatosMostrarDal();
-        }   
+            return dal.PedidoDatosMostrarDal(id);
+        }
+        public DataTable PedidoDatosListarBss(int id)
+        {
+            return dal.PedidoDatosListarDal(id);
+        }
     }
 }

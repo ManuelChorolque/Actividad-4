@@ -29,7 +29,7 @@ namespace GestionDePedido.VISTA.ClienteVista
         {
             PedidoInsertarVista.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             PedidoEditarVista.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            PedidoMostrarTotalVista.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            PedidoMostrarTotalVista.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);          
 
         }
         private void button2_Click(object sender, EventArgs e)

@@ -33,5 +33,17 @@ namespace GestionDePedido.VISTA.PedidoVista
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PedidoBss bss = new PedidoBss();
+            dataGridView1.DataSource = bss.PedidoDatosMostrarBss(IdClienteSeleccionada);
+            dataGridView2.DataSource = bss.PedidoDatosListarBss(IdClienteSeleccionada);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

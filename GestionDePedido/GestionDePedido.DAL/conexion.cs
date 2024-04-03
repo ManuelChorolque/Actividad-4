@@ -13,7 +13,7 @@ namespace GestionDePedido.DAL
 
         public static string CONECTAR
         {
-            get { return @"Data Source=DESKTOP-DCIJA7S; Initial Catalog=GESTIONPEDIDO; Integrated Security=True; TrustServerCertificate=true;"; }
+            get { return @"Data Source=PCA-17; Initial Catalog=GESTIONPEDIDO; Integrated Security=True; TrustServerCertificate=true;"; }
             //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
         }
         public static DataSet EjecutarDataSet(string consulta)
